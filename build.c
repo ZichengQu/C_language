@@ -1,5 +1,3 @@
-// 该程序应用的VSCode插件为C/C++ 和 CMake Tools
-
 #include <stdio.h>
 
 int main(void){

@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "helloworld", //启动文件的名字
+            "name": "build", //Debugger列表中的名字, 可自定义, 最好与待执行的C文件保持一致.
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/a.out", //执行文件是当前路径下的a.out
@@ -15,7 +15,7 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb", //参考中写的是lldb, 但lldb会报miDebuggerPath的错.
-            "preLaunchTask": "build any_name", //在执行前先build
+            "preLaunchTask": "build any_name", //在执行前先build, task.json中的label.
             // "miDebuggerPath": "/usr/bin/gdb"
         }
     ]

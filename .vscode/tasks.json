@@ -4,12 +4,12 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build any_name",
+            "label": "build any_name", //label可自定义
             "type": "shell",
             "command": "gcc",
             "args": [
                 "-g",
-                "helloworld.c",
+                "build.c", //待执行的c文件
                 "-o",
                 "a.out"
             ],
