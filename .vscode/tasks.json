@@ -1,0 +1,31 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build any_name",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "helloworld.c",
+                "-o",
+                "a.out"
+            ],
+            "options":{
+                "cwd": "${workspaceFolder}", //如果路径可变，则每次都要到这个路径下来编译。
+            },
+            "group": { //执行的是编译build指令
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
+// View, Command Palette中task: Configure Default Build Task, others 生成该task.json文件.
+// 这个task.json的任务是执行command gcc,
+// 将helloworld.c,
+// 在cwd的路径下,
+// 编译成a.out,
+// 默认执行的是build.
