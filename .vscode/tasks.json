@@ -4,19 +4,38 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build any_name", //label可自定义
+            "label": "build any_name", //label可自定义, 与launch.json中的preLaunchTask保持一致.
             "type": "shell",
             "command": "gcc",
             "args": [
                 "-g",
-                "build.c", //待执行的c文件
+                // "build.c", //待执行的c文件
+                "first/basic.c",
                 "-o",
                 "a.out"
             ],
             "options":{
-                "cwd": "${workspaceFolder}", //如果路径可变，则每次都要到这个路径下来编译。
+                "cwd": "${workspaceFolder}", //如果路径可变，则每次都要到这个路径下来编译.
             },
             "group": { //执行的是编译build指令
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Unavailable", //只是作为sample演示可以执行多个C文件, 不要运行此项.
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "build.c",
+                "-o",
+                "a.out"
+            ],
+            "options":{
+                "cwd": "${workspaceFolder}",
+            },
+            "group": {
                 "kind": "build",
                 "isDefault": true
             }
@@ -29,3 +48,4 @@
 // 在cwd的路径下,
 // 编译成a.out,
 // 默认执行的是build.
+// 若要有多个task, 则可在task中设置多个.

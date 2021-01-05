@@ -17,6 +17,20 @@
             "MIMode": "gdb", //参考中写的是lldb, 但lldb会报miDebuggerPath的错.
             "preLaunchTask": "build any_name", //在执行前先build, task.json中的label.
             // "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "Unavailable", //只是作为sample演示可以执行多个C文件, 不要运行此项.
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/a.out", 
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "Unavailable",
+            // "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
 }
@@ -25,3 +39,4 @@
 // 在cwd的路径下,
 // 编译成a.out,
 // 默认执行的是build.
+// 若要有多个可执行的C文件, 则可在configurations中设置多个.
