@@ -9,8 +9,7 @@
             "command": "gcc",
             "args": [
                 "-g",
-                // "build.c", //待执行的c文件
-                "first/basic.c",
+                "C_programming/basic.c", //"build.c", //待执行的c文件
                 "-o",
                 "a.out"
             ],
