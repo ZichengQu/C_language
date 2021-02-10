@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "build", //Debugger列表中的名字, 可自定义, 最好与待执行的C文件保持一致.
+            "name": "Debugger", //Debugger列表中的名字, 可自定义, 最好与待执行的C文件保持一致.
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/a.out", //执行文件是当前路径下的a.out
@@ -19,7 +19,7 @@
             // "miDebuggerPath": "/usr/bin/gdb"
         },
         {
-            "name": "Unavailable", //只是作为sample演示可以执行多个C文件, 不要运行此项.
+            "name": "Sample", //只是作为sample演示可以执行多个C文件, 不要运行此项.
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/a.out", 
@@ -29,14 +29,10 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "preLaunchTask": "Unavailable",
+            "preLaunchTask": "sample",
             // "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
 }
 // View, Command Palette中搜索launch找到Debug: Open launch.json, 选择C++(GDB/LLDB)生成launch.json文件.
-// 将helloworld.c,
-// 在cwd的路径下,
-// 编译成a.out,
-// 默认执行的是build.
 // 若要有多个可执行的C文件, 则可在configurations中设置多个.

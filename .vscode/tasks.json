@@ -22,12 +22,12 @@
             }
         },
         {
-            "label": "Unavailable", //只是作为sample演示可以执行多个C文件, 不要运行此项.
+            "label": "sample", //只是作为sample演示可以执行多个C文件, 不要运行此项.
             "type": "shell",
             "command": "gcc",
             "args": [
                 "-g",
-                "build.c",
+                "setup_env.c",
                 "-o",
                 "a.out"
             ],
@@ -43,8 +43,8 @@
 }
 // View, Command Palette中task: Configure Default Build Task, others 生成该task.json文件.
 // 这个task.json的任务是执行command gcc,
-// 将helloworld.c,
+// 将label对应为sample的setup_env.c文件,
 // 在cwd的路径下,
 // 编译成a.out,
-// 默认执行的是build.
+// 默认执行的是build操作.
 // 若要有多个task, 则可在task中设置多个.
