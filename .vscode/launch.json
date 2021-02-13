@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/a.out", //执行文件是当前路径下的a.out
-            "args": [],
+            "args": [], //可添加程序启动参数.
             "stopAtEntry": true, //改成true
             "cwd": "${workspaceFolder}",
             "environment": [],
