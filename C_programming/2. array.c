@@ -2,8 +2,7 @@
 
 int print_array(int output, int array[], int len){
     printf("\nOutput %d:\n", output);
-    for (int i = 0; i < len; i++)
-    { // 打印数组
+    for (int i = 0; i < len; i++){ // 打印数组
         printf("%d ", array[i]);
     }
     printf("\n");
@@ -89,6 +88,26 @@ int main(void){
     }
 
     print_array(2, array3, n3_index);
+
+    // Intersection: 两个有序数组的交集。
+    n1 = 5, n2 = 4; 
+    int n4 = n1 > n2 ? n1 : n2;   // Length of the array1, array2 and array3.
+    n1_index = 0, n2_index = 0;
+    int n4_index = 0; // Current index of the array1, array2 and array3.
+    int array4[n4];
+    while (n1_index < n1 && n2_index < n2){ // 当两个数组均不为空时
+        if (array1[n1_index] == array2[n2_index]){
+            array4[n4_index++] = array1[n1_index++];
+            n2_index++;
+        }
+        else if (array1[n1_index] < array2[n2_index]){
+            n1_index++;
+        }
+        else if (array2[n2_index] < array1[n1_index]){
+            n2_index++;
+        }
+    }
+    print_array(3, array4, n4_index);
 
     double array_5[10]; // double型array
     array_5[0] = -50.05;
