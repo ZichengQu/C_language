@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h> // 断言
 
 typedef struct node* Node; // 将 struct node* (指针指向某一地址, 这一地址存放"struct node"这一结构体) 简写成 Node.
 typedef struct LinkedList* LinkedList; // 两者名称可相同, 可不同.
@@ -74,6 +75,14 @@ void append(LinkedList list, int value, int inverse, int duplicate_removal){ // 
        
     }
     list->len++; // 该list的length++
+}
+
+void delete(LinkedList list, int value){ // 根据value, 删除list中值为value的node.
+    assert(list != NULL); // #include <assert.h> 断言这个list不为空. 若为空, 则这个程序终止.
+    // if(list == NULL) return; // 这行等价于断言.
+    assert(list->first_node != NULL);
+    
+
 }
 
 void appendByOrder(LinkedList list, int value){ // 有序递增插入
@@ -167,5 +176,7 @@ int main(void){
     appendByOrder(list3, 8);
     printList(list3, 3); // 打印该list的值和长度.
     freeList(list3); // 释放申请的内存
+
+
 
 }
