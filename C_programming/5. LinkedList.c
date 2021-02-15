@@ -106,6 +106,10 @@ void appendByOrder(LinkedList list, int value){ // 有序递增插入
     list->len++; // 该list的length++
 }
 
+void sort(LinkedList list){ // 对该list使用排序算法进行排序: 冒泡, 插入, 选择等等. 
+    // 需要频繁操作指针, 需注意指针的bug.
+}
+
 void printList(LinkedList list, int output){ // 打印lsit
     Node current = list->first_node; // 为防止 list = list->next时, 无法重新获取原始的list.
     int index = 0;
@@ -114,6 +118,18 @@ void printList(LinkedList list, int output){ // 打印lsit
         current = current->next; // 为了防止找不到原始的list, 因此用一个current去承接next的赋值.
     }
     printf("Output %d: The length of this list is: %d.\n", output, list->len);
+}
+
+void freeList(LinkedList list){ // 释放申请的内存.
+    if(list != NULL){
+        Node current = list->first_node;
+        while (current != NULL){ // free掉该list中的每一个node.
+            Node next = current->next;
+            free(current);
+            current = next;
+        }
+        free(list); // free掉该list的空间.
+    }
 }
 
 int main(void){
@@ -128,6 +144,7 @@ int main(void){
     append(list1, 100, inverse, duplicate_removal);
     append(list1, 10000, inverse, duplicate_removal);
     printList(list1, 1); // 打印该list的值和长度.
+    freeList(list1); // 释放申请的内存
 
     printf("\n");
 
@@ -138,6 +155,7 @@ int main(void){
         append(list2, values[i], inverse, duplicate_removal);
     }
     printList(list2, 2);
+    freeList(list2); // 释放申请的内存
 
     printf("\n");
 
@@ -148,5 +166,6 @@ int main(void){
     appendByOrder(list3, 3);
     appendByOrder(list3, 8);
     printList(list3, 3); // 打印该list的值和长度.
+    freeList(list3); // 释放申请的内存
 
 }
