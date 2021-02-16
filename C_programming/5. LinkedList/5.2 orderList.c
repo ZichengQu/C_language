@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <assert.h>
 
 #include "5.2 orderList.h" // 标准类库用<>, 自定义的h文件用双引号.
@@ -8,8 +9,8 @@ typedef struct node* Node; // 不开放给其他人使用, 只能在本文件中
 // typedef struct LinkedList* LinkedList; // 放入h文件, 开放给其他人使用, 可以在其它文件中使用.
 
 struct node{
-    int value1;
-    double value2;
+    double money;
+    char* array;
     Node next;
 };
 
@@ -19,10 +20,15 @@ struct LinkedList{
     Node last_node;
 };
 
-Node newNode(int value1, double value2){
+Node newNode(double money, char* array){
     Node node = malloc(sizeof(struct node));
-    node->value1 = value1;
-    node->value2 = value2;
+
+    node->money = money;
+
+    node->array = malloc(sizeof(char) * (strlen(array) + 1)); // 加 1 是因为 \0
+    strcpy(node->array, array);
+    node->array[strlen(array)] = '\0'; // 不同的OS可能对strcpy的优化不一样, 因此最好手动在最后补齐一个 \0
+
     node->next = NULL;
 
     return node;
@@ -39,39 +45,33 @@ LinkedList newList(){
 
 int compareTo(Node first, Node second){ // 对比两个Node的value1的大小
     assert(first != NULL && second != NULL);
-    // 根据两个Node的value1和value2进行比较
-    // 假设此例的value2的优先级大于value1(先根据value2的大小进行排序, 若value2一致, 则根据value1的大小进行排序).
-    // 如果first.value2比second.value2小, 返回 -1
-    // 如果first.value2比second.value2大, 返回  1
-    // 如果两者的value2相等:
-            // 如果first.value1比second.value1小, 返回 -1
-            // 如果first.value1比second.value1大, 返回  1
-    // 如果两者的value2和value1均相等, 则返回 0
+    // 根据两个Node的money和array进行比较
+    // 假设此例的money的优先级大于array(先根据money的大小进行排序, 若money一致, 则根据array的大小进行排序).
+    // 如果first.money比second.money小, 返回 -1
+    // 如果first.money比second.money大, 返回  1
+    // 如果两者的money相等:
+            // 如果first.array比second.array小, 返回 -1
+            // 如果first.array比second.array大, 返回  1
+    // 如果两者的money和array均相等, 则返回 0
     // 类似于strcmp
     int result = 0;
-    if (first->value2 < second->value2){
+    if (first->money < second->money){
         result = -1;
-    }else if(first->value2 > second->value2){
+    }else if(first->money > second->money){
         result = 1;
     }else{
-        if(first->value1 < second->value1){
-            result = -1;
-        } else if(first->value1 > second->value1){
-            result = 1;
-        }else{
-            // 如果有三个属性需要进行排序, 则此处还有代码, 逻辑同上.
-        }
+       result = strcmp(first->array, second->array); // first.array > second.array? 1: (first.array < second.array? -1: 0)
     }
     return result;
 }
 
 /**
- * 假设此例的 value2 的优先级大于 value1.
- * 先根据 value2 的大小进行排序,.
- * 若 value2 一致, 则根据 value1 的大小进行排序.
+ * 假设此例的 money 的优先级大于 array.
+ * 先根据 money 的大小进行排序,.
+ * 若 money 一致, 则根据 array 的大小进行排序.
  */
-void appendByOrder(LinkedList list, int value1, double value2){ // 有序递增插入
-    Node new_node = newNode(value1, value2);
+void appendByOrder(LinkedList list, double money, char* array){ // 有序递增插入
+    Node new_node = newNode(money, array);
     if (list->first_node == NULL){ // 如果第一个node是空的.
         list->first_node = new_node; // 则创建第一个node.
         list->last_node = list->first_node; // 因为此时该list只有一个node, 所有其最后一个node和第一个node是同一个node.
@@ -87,7 +87,7 @@ void appendByOrder(LinkedList list, int value1, double value2){ // 有序递增�
             Node current = list->first_node->next;
             while (current != NULL)
             { // 当current不为空时
-                if (compareTo(new_node, pre) >= 0 && compareTo(new_node, current) <= 0){ // if(new_node->value1 >= pre->value1 && new_node->value1 <= current->value1)
+                if (compareTo(new_node, pre) >= 0 && compareTo(new_node, current) <= 0){ // if(new_node->array >= pre->array && new_node->array <= current->array)
                     break;
                 }
                 pre = pre->next;
@@ -104,7 +104,7 @@ void printList(LinkedList list){
     Node current = list->first_node;
     int index = 0;
     while (current != NULL){
-        printf("index: %d, value1: %d, value2: %lf\n", index++, current->value1, current->value2);
+        printf("index: %d, money: %lf, array: %s\n", index++, current->money, current->array);
         current = current->next;
     }
     printf("The length of this list: %d.\n", list->len);
@@ -115,6 +115,7 @@ void freeList(LinkedList list){
         Node current = list->first_node;
         while (current != NULL){
             Node next = current->next;
+            free(current->array);
             free(current);
             current = next;
         }

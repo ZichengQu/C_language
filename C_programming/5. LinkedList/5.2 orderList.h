@@ -1,5 +1,3 @@
-
-
 // typedef struct node* Node; // 不开放给其他人使用, 只能在其C文件中使用.
 typedef struct LinkedList* LinkedList; // 开放给其它人使用
 
@@ -32,7 +30,7 @@ LinkedList newList(); // 开放给其它人使用
  * @param value1 
  * @param value2
  */
-void appendByOrder(LinkedList list, int value1, double value2);
+void appendByOrder(LinkedList list, double money, char* array);
 
 /**
  * 打印list
