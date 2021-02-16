@@ -81,8 +81,26 @@ void delete(LinkedList list, int value){ // 根据value, 删除list中值为valu
     assert(list != NULL); // #include <assert.h> 断言这个list不为空. 若为空, 则这个程序终止.
     // if(list == NULL) return; // 这行等价于断言.
     assert(list->first_node != NULL);
-    
-
+    if(value == list->first_node->value){
+        Node deleteNode = list->first_node;
+        list->first_node = deleteNode->next; // 不需要判断list->first_node与list->last_node是否相等. 若相等, last也会被free掉. 若不相等, 就只有first会被free掉.
+        free(deleteNode);
+        list->len--;
+    }else{
+        Node pre = list->first_node;
+        Node current = list->first_node->next;
+        while(current != NULL){
+            if(current->value == value){
+                Node deleteNode = current;
+                pre->next = deleteNode->next;
+                free(deleteNode);
+                list->len--;
+                break;
+            }
+            pre = pre->next;
+            current = current->next;
+        }
+    }
 }
 
 void appendByOrder(LinkedList list, int value){ // 有序递增插入
@@ -122,11 +140,13 @@ void sort(LinkedList list){ // 对该list使用排序算法进行排序: 冒泡,
 void printList(LinkedList list, int output){ // 打印lsit
     Node current = list->first_node; // 为防止 list = list->next时, 无法重新获取原始的list.
     int index = 0;
+    printf("Output %d: \t", output);
     while (current != NULL){
-        printf("Output %d: The index is %d, the value is %d.\n", output, index++, current->value);
+        // printf("Output %d: The index is %d, the value is %d.\n", output, index++, current->value);
+        printf("%d ", current->value);
         current = current->next; // 为了防止找不到原始的list, 因此用一个current去承接next的赋值.
     }
-    printf("Output %d: The length of this list is: %d.\n", output, list->len);
+    printf("\tlength: %d.\n", list->len);
 }
 
 void freeList(LinkedList list){ // 释放申请的内存.
@@ -163,7 +183,13 @@ int main(void){
     for (int i = 0; i < len; i++){  // 将数组和数组长度在一起append.
         append(list2, values[i], inverse, duplicate_removal);
     }
-    printList(list2, 2);
+    printList(list2, 2); // 打印该list
+    delete(list2, 7); // 删除第一个Node
+    printList(list2, 3);
+    delete(list2, 50); // 删除中间Node
+    printList(list2, 4);
+    delete(list2, 98); // 删除最后一个Node
+    printList(list2, 5);
     freeList(list2); // 释放申请的内存
 
     printf("\n");
@@ -174,9 +200,6 @@ int main(void){
     appendByOrder(list3, 5);
     appendByOrder(list3, 3);
     appendByOrder(list3, 8);
-    printList(list3, 3); // 打印该list的值和长度.
+    printList(list3, 6); // 打印该list的值和长度.
     freeList(list3); // 释放申请的内存
-
-
-
 }
