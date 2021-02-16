@@ -177,6 +177,8 @@ void freeList(LinkedList list){ // 释放申请的内存.
     }
 }
 
+
+
 int main(void){
     // 0 => False, 1 => True
     int inverse = 0; // 正常不需要, 这里添加inverse只是为了可以从前/后append节点.

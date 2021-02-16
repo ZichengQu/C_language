@@ -9,7 +9,9 @@
             "command": "gcc",
             "args": [
                 "-g",
-                "C_programming/5. LinkedList.c", //"build.c", //待执行的c文件
+                "C_programming/5. LinkedList/5.2 orderList.h", //"xxx.h", //待执行的h文件
+                "C_programming/5. LinkedList/5.2 orderList.c", //"xxx.c", //待执行的c文件
+                "C_programming/5. LinkedList/5.2 orderList_main.c", //"main.c", //待执行的c文件
                 "-o",
                 "a.out"
             ],

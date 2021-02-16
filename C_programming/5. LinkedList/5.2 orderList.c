@@ -2,8 +2,10 @@
 #include <stdlib.h>
 #include <assert.h>
 
-typedef struct node* Node;
-typedef struct LinkedList* LinkedList;
+#include "5.2 orderList.h" // 标准类库用<>, 自定义的h文件用双引号.
+
+typedef struct node* Node; // 不开放给其他人使用, 只能在本文件中使用.
+// typedef struct LinkedList* LinkedList; // 放入h文件, 开放给其他人使用, 可以在其它文件中使用.
 
 struct node{
     int value1;
@@ -118,18 +120,4 @@ void freeList(LinkedList list){
         }
         free(list);
     }
-}
-
-int main(void){
-    LinkedList list = newList(); // 声明该list的地址.
-    appendByOrder(list, 1, 6.6); // 通过LinkedList进行有序递增插入(先判断value2, 再判断value1).
-    appendByOrder(list, 9, 5.5);
-    appendByOrder(list, 5, 6.6);
-    appendByOrder(list, 3, 9.8);
-    appendByOrder(list, 5, 6.6);
-    appendByOrder(list, 3, 10.9);
-    appendByOrder(list, 8, 6.6);
-
-    printList(list);
-    freeList(list);
 }
