@@ -30,6 +30,7 @@ LinkedList newList(){ // 创建一个list. 这个LinkedList是简写的LinkedLis
     LinkedList list = malloc(sizeof(struct LinkedList)); // 这个 struct LinkedList 与 "typedef struct LinkedList* LinkedList"的两个LinkedList不同.
     list->len = 0;
     list->first_node = NULL;
+    list->last_node = NULL;
 
     return list;
 }
@@ -103,16 +104,31 @@ void delete(LinkedList list, int value){ // 根据value, 删除list中值为valu
     }
 }
 
+int compareTo(Node first, Node second){ // 对比两个Node的value的大小
+    assert(first != NULL && second != NULL);
+    // 如果第一个比第二个小, 返回 -1
+    // 如果第一个比第二个大, 返回  1
+    // 如果两者相等, 返回 0
+    // 类似于strcmp
+    int result = 0;
+    if (first->value < second->value){
+        result = -1;
+    }else if(first->value > second->value){
+        result = 1;
+    }
+    return result;
+}
+
 void appendByOrder(LinkedList list, int value){ // 有序递增插入
     Node new_node = newNode(value);
     if (list->first_node == NULL){ // 如果第一个node是空的.
         list->first_node = new_node; // 则创建第一个node.
         list->last_node = list->first_node; // 因为此时该list只有一个node, 所有其最后一个node和第一个node是同一个node.
     }else{
-        if(value < list->first_node->value){
+        if(compareTo(new_node, list->first_node) < 0){ // new_node的value比first_node的value还小.
             new_node->next = list->first_node;
             list->first_node = new_node;
-        }else if(value > list->last_node->value){
+        }else if(compareTo(new_node, list->last_node) > 0){ // new_node的value比last_node的value还大.
             list->last_node->next = new_node; // 将新节点与list->last_node建立连接.
             list->last_node = new_node; // 更新list->last_node为new_node.
         }else{
@@ -120,7 +136,7 @@ void appendByOrder(LinkedList list, int value){ // 有序递增插入
             Node current = list->first_node->next;
             while (current != NULL)
             { // 当current不为空时
-                if(value >= pre->value && value <= current->value){
+                if (compareTo(new_node, pre) >= 0 && compareTo(new_node, current) <= 0){ // if(new_node->value >= pre->value && new_node->value <= current->value)
                     break;
                 }
                 pre = pre->next;
