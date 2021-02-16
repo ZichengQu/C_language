@@ -139,7 +139,7 @@ void sort(LinkedList list){ // 对该list使用排序算法进行排序: 冒泡,
 
 void printList(LinkedList list, int output){ // 打印lsit
     Node current = list->first_node; // 为防止 list = list->next时, 无法重新获取原始的list.
-    int index = 0;
+    // int index = 0;
     printf("Output %d: \t", output);
     while (current != NULL){
         // printf("Output %d: The index is %d, the value is %d.\n", output, index++, current->value);
