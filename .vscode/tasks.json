@@ -16,7 +16,7 @@
                 "a.out"
             ],
             "options":{
-                "cwd": "${workspaceFolder}", //如果路径可变，则每次都要到这个路径下来编译.
+                "cwd": "${workspaceFolder}", //如果路径可变, 则每次都要到这个路径下来编译.
             },
             "group": { //执行的是编译build指令
                 "kind": "build",
