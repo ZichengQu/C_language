@@ -16,7 +16,7 @@
             "externalConsole": false,
             "MIMode": "gdb", //参考中写的是lldb, 但lldb会报miDebuggerPath的错.
             "preLaunchTask": "build any_name", //在执行前先build, task.json中的label.
-            // "miDebuggerPath": "/usr/bin/gdb"
+            // "miDebuggerPath": "/usr/bin/gdb" // 使用sudo apt-get install cmake gcc clang gdb build-essential按照C环境, 可不用写此句.
         },
         {
             "name": "Sample", //只是作为sample演示可以执行多个C文件, 不要运行此项.
