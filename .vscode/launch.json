@@ -4,33 +4,33 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "Debugger", //Debugger列表中的名字, 可自定义, 最好与待执行的C文件保持一致.
+        {   // 可自我按需修改
+            "name": "Debugger",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/a.out", //执行文件是当前路径下的a.out
-            "args": [], //可添加程序启动参数.
-            "stopAtEntry": true, //改成true
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb", //参考中写的是lldb, 但lldb会报miDebuggerPath的错.
-            "preLaunchTask": "build any_name", //在执行前先build, task.json中的label.
-            // "miDebuggerPath": "/usr/bin/gdb" // 使用sudo apt-get install cmake gcc clang gdb build-essential按照C环境, 可不用写此句.
-        },
-        {
-            "name": "Sample", //只是作为sample演示可以执行多个C文件, 不要运行此项.
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/a.out", 
-            "args": [],
+            "program": "${workspaceFolder}/a.out",
+            "args": [], 
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "preLaunchTask": "sample",
+            "preLaunchTask": "build any_name",
             // "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {   // Debug参考模板，不可更改
+            "name": "Sample", //Debugger列表中的名字, 可自定义, 最好与待执行的C文件保持一致.
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/a.out", //执行文件是当前路径下的a.out
+            "args": ["参数1是argv[1], 不是argv[0], 因为argv[0]是当前被执行文件的路径, 因此哪怕不传参, argc至少也为1","参数2是argv[2]"],
+            "stopAtEntry": true,//改成true
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb", //参考中写的是lldb, 但lldb会报miDebuggerPath的错.
+            "preLaunchTask": "sample",  //在执行前先build, task.json中的label.
+            // "miDebuggerPath": "/usr/bin/gdb" // 使用sudo apt-get install cmake gcc clang gdb build-essential按照C环境, 可不用写此句.
         }
     ]
 }

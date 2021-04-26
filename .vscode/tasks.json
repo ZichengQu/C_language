@@ -3,12 +3,13 @@
     // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
-        {
-            "label": "build any_name", //label可自定义, 与launch.json中的preLaunchTask保持一致.
+        {   // 可自我按需修改
+            "label": "build any_name",
             "type": "shell",
             "command": "gcc",
             "args": [
                 "-g",
+                // 下列文件不分顺序，但务必保证只有一个main入口。为了格式统一，将main放在最后一个位置，前面都是其需要的h和c文件。
                 "C_programming/5. LinkedList/5.2 orderList.h", //"xxx.h", //待执行的h文件
                 "C_programming/5. LinkedList/5.2 orderList.c", //"xxx.c", //待执行的c文件
                 "C_programming/5. LinkedList/5.2 orderList_main.c", //"main.c", //待执行的c文件
@@ -16,20 +17,26 @@
                 "a.out"
             ],
             "options":{
-                "cwd": "${workspaceFolder}", //如果路径可变, 则每次都要到这个路径下来编译.
+                "cwd": "${workspaceFolder}",
             },
-            "group": { //执行的是编译build指令
+            "group": {
                 "kind": "build",
                 "isDefault": true
             }
         },
-        {
-            "label": "sample", //只是作为sample演示可以执行多个C文件, 不要运行此项.
+        {   // Debug参考模板，不可更改
+            "label": "sample", //label可自定义, 与launch.json中的preLaunchTask保持一致.
             "type": "shell",
             "command": "gcc",
             "args": [
                 "-g",
-                "setup_env.c",
+                // 下列文件不分顺序，但务必保证只有一个main入口。为了格式统一，将main放在最后一个位置，前面都是该main所需要的h和c文件.
+                // h文件
+                // c文件
+                // ...
+                // h文件
+                // c文件
+                "setup_env.c", // main文件
                 "-o",
                 "a.out"
             ],
