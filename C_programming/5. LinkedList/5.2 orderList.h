@@ -1,5 +1,5 @@
 // typedef struct node* Node; // 不开放给其他人使用, 只能在其C文件中使用.
-typedef struct LinkedList* LinkedList; // 开放给其它人使用
+typedef struct LinkedList* LinkedList;  // 开放给其它人使用
 
 // struct LinkedList{ // 最好不要给第三方调用. 因为C语言是操作内存的, 最好不要让第三方知道结构体的定义, 防止其修改内存地址.
 //     int len;
@@ -15,7 +15,7 @@ typedef struct LinkedList* LinkedList; // 开放给其它人使用
 /**
  * 创建一个list
  */
-LinkedList newList(); // 开放给其它人使用
+LinkedList newList();  // 开放给其它人使用
 
 /**
  * 对两个node的value1和value2(优先)的大小进行比较
