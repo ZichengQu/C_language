@@ -9,5 +9,6 @@ UNSW机房的C版本是C11，会使用dcc代替gcc，dcc会检测是否内存泄
 
 0. 安装C环境: sudo apt-get install cmake gcc clang gdb build-essential
 1. 配置Debug环境: "build.c", ".vscode/c_cpp_properties.json", "vscode/tasks.json", ".vscode/launch.json"
+2. 若想使用cmake，则需Ctrl + Shift + P 搜索cmake -> quick start -> execute，在生成的CMakeLists.txt中配置"add_executable"; 并在".vscode"中添加"setting.json", 在其中添加 "cmake.debugConfig"进行传argv等参数.
 2. C basic: C_programming/basic.c
 3. 
