@@ -1,0 +1,8 @@
+{
+    "cmake.debugConfig": {
+        "args": [
+            "cmake: 参数1是argv[1], 不是argv[0], 因为argv[0]是当前被执行文件的路径, 因此哪怕不传参, argc至少也为1",
+            "cmake: 参数2是argv[2]"
+        ]
+    }
+}

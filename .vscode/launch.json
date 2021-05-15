@@ -23,7 +23,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/a.out", //执行文件是当前路径下的a.out
-            "args": ["参数1是argv[1], 不是argv[0], 因为argv[0]是当前被执行文件的路径, 因此哪怕不传参, argc至少也为1","参数2是argv[2]"],
+            "args": ["非cmake: 参数1是argv[1], 不是argv[0], 因为argv[0]是当前被执行文件的路径, 因此哪怕不传参, argc至少也为1","非cmake: 参数2是argv[2]"],
             "stopAtEntry": true,//改成true
             "cwd": "${workspaceFolder}",
             "environment": [],
