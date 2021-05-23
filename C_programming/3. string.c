@@ -9,7 +9,7 @@ int main(void) {
      * \0 表示的是字符串终止符. 
      * char array[n] 等同于 char *array(赋值时，接收的是地址)
      * array[index] 等同于 *(array + index) ==> * 反应的是地址上存放的是内容.
-     * 非指针型变量用 & 取其地址. 
+     * 非指针型变量本身是值，用 & 取其地址. 指针型变量本身是地址，用 * 取其值.
      * int* pointer1: 指针指向某一地址, 这一地址存放的值为int类型.
      * struct LinkedList*: 指针指向某一地址, 这一地址存放"struct LinkedList"这一结构体.
      */

@@ -12,12 +12,12 @@
 int main(int argc, char* argv[]) {
     printf("Output 1: argc为: %d\n", argc);
     for(int i = 0; i < argc; i++) {
-        printf("Output 1: 第%d个参数, 其值为: %s\n", i, argv[i]);  // 第0个参数是 .out文件名, 第一个才开始是参数.
+        printf("Output 1: 第%d个参数, 其值为: '%s'\n", i, argv[i]);  // 第0个参数是 .out文件名, 第一个才开始是参数.
     }
 
     // int *numbers = malloc(sizeof(int) * (argc - 1)); // 在heap区分配了一块内存.
     // for (int i = 1; i < argc; i++){
-    //     numbers[i - 1] = atoi(argv[i]); // atoi强转成数字. 等效于 *(numbers + i - 1) = argv[i];
+    //     numbers[i - 1] = atoi(argv[i]); // atoi强转成数字. 等效于 *(numbers + i - 1) = atoi(argv[i])
     // }
 
     // printf("\nOutput %d: 该numbers数组为:\n", 2);

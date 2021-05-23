@@ -93,9 +93,8 @@ void delete(LinkedList list, int value) {  // 根据value, 删除list中值为va
         Node current = list->first_node->next;
         while(current != NULL) {
             if(current->value == value) {
-                Node deleteNode = current;
-                pre->next = deleteNode->next;
-                free(deleteNode);
+                pre->next = current->next;
+                free(current);
                 list->len--;
                 break;
             }
