@@ -18,7 +18,7 @@ struct node {   // 定义一个结构体, 因此node是一个自定义的数据�
 };
 
 struct listStack {
-    Node front;  // 压栈和弹栈都在LinkedList的头节点进行操作，该头节点只存储list中的firstNode，不存储value。每回压栈和弹栈都通过该front找到list中的firstNode.
+    Node front;  // 压栈和弹栈都在LinkedList的头节点进行操作，该头节点只存储list中的firstNode，不存储value。每回压栈和弹栈都通过该front找到list中的firstNode. 与操作lastNode相比, 可减少时间复杂度.
 };
 
 /**
