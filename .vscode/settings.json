@@ -37,7 +37,8 @@
         "9.1 intarrayqueue.h": "c",
         "9.1 arrayqueue.h": "c",
         "8.1 arraystack.h": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "9.2 listqueue.h": "c"
     }
 }
 

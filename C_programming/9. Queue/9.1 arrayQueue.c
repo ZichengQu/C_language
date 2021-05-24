@@ -64,13 +64,13 @@ bool isEmptyArrayQueue(ArrayQueue queue) {
  */
 void printArrayQueue(ArrayQueue queue) {
     assert(queue != NULL);
-    printf("该queue的信息为:\n");
+    printf("\t该queue的信息为:\n");
     if(queue->index == -1) {
-        printf("\tThis queue is empty.\n");
+        printf("\t\tThis queue is empty.\n");
     } else {
-        printf("\tThe index of this queue is %d;\n", queue->index);
+        printf("\t\tThe index of this queue is %d;\n", queue->index);
         for(int i = 0; i <= queue->index; i++) {
-            printf("\t第%d个元素的值是%d;\n", i, queue->array[i]);
+            printf("\t\t第%d个元素的值是%d;\n", i, queue->array[i]);
         }
     }
 }
