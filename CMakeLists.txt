@@ -20,6 +20,7 @@ add_executable(3.string
 add_executable(4.malloc
     "C_programming/4. malloc.c"
 )
+
 add_executable(5.1-LinkedList
     "C_programming/5. LinkedList/5.1 LinkedList.c"
 )
@@ -28,6 +29,7 @@ add_executable(5.2-orderList_main
     "C_programming/5. LinkedList/5.2 orderList.h"
     "C_programming/5. LinkedList/5.2 orderList.c"
 )
+
 add_executable(6.input
     "C_programming/6. input.c"
     "C_programming/5. LinkedList/5.2 orderList.h"
@@ -35,6 +37,12 @@ add_executable(6.input
 )
 add_executable(7.file
     "C_programming/7. file.c"
+)
+
+add_executable(8.1-intArrayStack_main
+    "C_programming/8. Stack/8.1 intArrayStack_main.c"
+    "C_programming/8. Stack/8.1 intArrayStack.h"
+    "C_programming/8. Stack/8.1 intArrayStack.c"
 )
 
 

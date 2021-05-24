@@ -30,7 +30,10 @@
         }
     },
     "files.associations": {
-        "5.2 orderlist.h": "c"
+        "5.2 orderlist.h": "c",
+        "stdlib.h": "c",
+        "6.1 intarraystack.h": "c",
+        "8.1 intarraystack.h": "c"
     }
 }
 
