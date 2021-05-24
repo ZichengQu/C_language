@@ -1,7 +1,13 @@
 // typedef struct node* Node; // 不开放给其他人使用, 只能在其C文件中使用.
-typedef struct LinkedList* LinkedList;  // 开放给其它人使用
+typedef struct LinkedList* LinkedList;  // 将LinkedList开放给其它人使用，但只是开放使用权限，查看不到LinkedList结构体里的细节.
 
-// struct LinkedList{ // 最好不要给第三方调用. 因为C语言是操作内存的, 最好不要让第三方知道结构体的定义, 防止其修改内存地址.
+// struct node { // 最好不要将结构体暴漏给第三方. 因为C语言是操作内存的, 最好不要让第三方知道结构体的定义, 防止其修改内存地址. 比如知道了value的地址，可以强制更改其地址上的值.
+//     double value;
+//     char* string;
+//     Node next;
+// };
+
+// struct LinkedList{
 //     int len;
 //     Node first_node;
 //     Node last_node;
@@ -30,7 +36,7 @@ LinkedList newList();  // 开放给其它人使用
  * @param value1 
  * @param value2
  */
-void appendByOrder(LinkedList list, double money, char* array);
+void appendByOrder(LinkedList list, double value, char* string);
 
 /**
  * 打印list
