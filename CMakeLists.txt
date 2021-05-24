@@ -28,6 +28,14 @@ add_executable(5.2-orderList_main
     "C_programming/5. LinkedList/5.2 orderList.h"
     "C_programming/5. LinkedList/5.2 orderList.c"
 )
+add_executable(6.input
+    "C_programming/6. input.c"
+    "C_programming/5. LinkedList/5.2 orderList.h"
+    "C_programming/5. LinkedList/5.2 orderList.c"
+)
+add_executable(7.file
+    "C_programming/7. file.c"
+)
 
 
 

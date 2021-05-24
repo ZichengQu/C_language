@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/a.out",
             "args": [], 
-            "stopAtEntry": true,
+            "stopAtEntry": true, // 在debug时，即使没打断点，也会自动停留在程序最开始执行的位置. 若为false，则一直遇到断点才会暂停程序.
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,

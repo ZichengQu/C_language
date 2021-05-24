@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(int argc, char** argv) {
-    // 通过launch.json的args向main函数中传参.
+    // 通过launch.json或settings.json(cmake)的args向main函数中传参.
     printf("argc为: %d\n", argc);
     for(int i = 0; i < argc; i++) {
         printf("argv[%d]为: %s\n", i, argv[i]);

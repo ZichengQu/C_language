@@ -1,8 +1,67 @@
+// CMake的Debug方式
 {
     "cmake.debugConfig": {
+        "version": "0.2.0",
+        "name": "Debugger",
+        "type": "cppdbg",
+        "request": "launch",
+        // "program": "${workspaceFolder}/build/5.2-orderList_main", // 会指定运行或调试哪个程序(无需添加关联的h或c，因为已在CMakeLists.txt中关联)，但最好还是使用cmake的set debug target
         "args": [
-            "cmake: 参数1是argv[1], 不是argv[0], 因为argv[0]是当前被执行文件的路径, 因此哪怕不传参, argc至少也为1",
-            "cmake: 参数2是argv[2]"
-        ]
+                    "cmake: 参数1是argv[1], 不是argv[0], 因为argv[0]是当前被执行文件的路径, 因此哪怕不传参, argc至少也为1",
+                    "cmake: 参数2是argv[2]"
+                    ],
+        "stopAtEntry": true, // 在debug时，即使没打断点，也会自动停留在程序最开始执行的位置. 若为false，则一直遇到断点才会暂停程序.
+        "cwd": "${workspaceRoot}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "all": {
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "linux": {
+                "MIMode": "gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        }
+    },
+    "files.associations": {
+        "5.2 orderlist.h": "c"
     }
 }
+
+// { // CMake模板，勿改
+//     "cmake.debugConfig": {
+//         "version": "0.2.0",
+//         "name": "Debugger",
+//         "type": "cppdbg",
+//         "request": "launch",
+//         // "program": "${workspaceFolder}/build/5.2-orderList_main", // 会指定运行或调试哪个程序(无需添加关联的h或c，因为已在CMakeLists.txt中关联)，但最好还是使用cmake的set debug target
+//         "args": [
+//                     "cmake: 参数1是argv[1], 不是argv[0], 因为argv[0]是当前被执行文件的路径, 因此哪怕不传参, argc至少也为1",
+//                     "cmake: 参数2是argv[2]"
+//                     ],
+//         "stopAtEntry": true, // 在debug时，即使没打断点，也会自动停留在程序最开始执行的位置. 若为false，则一直遇到断点才会暂停程序.
+//         "cwd": "${workspaceRoot}",
+//         "environment": [],
+//         "externalConsole": false,
+//         "MIMode": "gdb",
+//         "all": {
+//             "request": "launch",
+//             "cwd": "${workspaceRoot}",
+//             "linux": {
+//                 "MIMode": "gdb"
+//             },
+//             "osx": {
+//                 "MIMode": "lldb"
+//             },
+//             "windows": {
+//                 "MIMode": "gdb"
+//             }
+//         }
+//     }
+// }

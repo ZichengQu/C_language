@@ -1,0 +1,15 @@
+argc为: 5
+argv[0]为: ./a.out
+argv[1]为: argv_1
+argv[2]为: argv_2
+argv[3]为: ...
+argv[4]为: argv_n
+请输入一个数字：your input is 1
+请输入一个数字：your input is 5
+请输入一个数字：your input is 10
+请输入一个数字：your input is 20
+请输入一个数字：your input is 50
+请输入一个数字：your input is 75
+请输入一个数字：your input is 91
+请输入一个数字：your input is 99
+请输入一个数字：your input is 100
