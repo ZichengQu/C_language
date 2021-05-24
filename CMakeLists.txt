@@ -39,17 +39,24 @@ add_executable(7.file
     "C_programming/7. file.c"
 )
 
-add_executable(8.1-arrayStack_main
-    "C_programming/8. Stack/8.1 arrayStack_main.c"
+add_executable(8.stack_main
+    "C_programming/8. Stack/8.0 stack_main.c"
     "C_programming/8. Stack/8.1 arrayStack.h"
     "C_programming/8. Stack/8.1 arrayStack.c"
+    "C_programming/8. Stack/8.2 listStack.h"
+    "C_programming/8. Stack/8.2 listStack.c"
 )
 
 add_executable(9.1-arrayQueue_main
-    "C_programming/9. Queue/9.1 arrayQueue_main.c"
+    "C_programming/9. Queue/9.0 queue_main.c"
     "C_programming/9. Queue/9.1 arrayQueue.h"
     "C_programming/9. Queue/9.1 arrayQueue.c"
 )
+# add_executable(9.2-listQueue_main
+#     "C_programming/9. Queue/9.0 queue_main.c"
+#     "C_programming/9. Queue/9.2 listQueue.h"
+#     "C_programming/9. Queue/9.2 listQueue.c"
+# )
 
 
 

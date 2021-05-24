@@ -58,13 +58,13 @@ bool isEmptyArrayStack(ArrayStack stack) {
  */
 void printArrayStack(ArrayStack stack) {
     assert(stack != NULL);
-    printf("该stack的信息为:\n");
+    printf("\t该stack的信息为(从栈底开始打印):\n");
     if(stack->index == -1) {
-        printf("\tThis stack is empty.\n");
+        printf("\t\tThis stack is empty.\n");
     } else {
-        printf("\tThe index of this stack is %d;\n", stack->index);
+        printf("\t\tThe index of this stack is %d;\n", stack->index);
         for(int i = 0; i <= stack->index; i++) {
-            printf("\t第%d个元素的值是%d;\n", i, stack->array[i]);
+            printf("\t\t第%d个元素的值是%d;\n", i, stack->array[i]);
         }
     }
 }
