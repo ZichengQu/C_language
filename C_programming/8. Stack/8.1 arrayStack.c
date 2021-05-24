@@ -1,13 +1,15 @@
-#include "8.1 intArrayStack.h"
+#include <stdio.h>
 
-// 8.1 intArrayStack描述的是利用Array实现stack的方式，存储的是int
+#include "8.1 arrayStack.h"
+
+// 8.1 arrayStack描述的是利用Array实现stack的方式
 // stack的特点是first in，last out
 
 #define ARRAY_LEN 1024
 
-// typedef struct intArrayStack* IntArrayStack; // 在h文件中定义了
+// typedef struct arrayStack* ArrayStack; // 在h文件中定义了
 
-struct intArrayStack {
+struct arrayStack {
     int array[ARRAY_LEN];
     int index;
 };
@@ -15,8 +17,8 @@ struct intArrayStack {
 /**
  * 创建stack
  */
-IntArrayStack createIntArrayStack() {
-    IntArrayStack stack = malloc(sizeof(struct intArrayStack));
+ArrayStack createArrayStack() {
+    ArrayStack stack = malloc(sizeof(struct arrayStack));
     stack->index = -1;
     return stack;
 }
@@ -26,7 +28,7 @@ IntArrayStack createIntArrayStack() {
  * @param stack
  * @param data
  */
-void pushIntArrayStack(IntArrayStack stack, int data) {
+void pushArrayStack(ArrayStack stack, int data) {
     assert(stack->index < ARRAY_LEN - 1);
     stack->array[++stack->index] = data;
 }
@@ -35,7 +37,7 @@ void pushIntArrayStack(IntArrayStack stack, int data) {
  * 弹栈
  * @param stack
  */
-int popIntArrayStack(IntArrayStack stack) {
+int popArrayStack(ArrayStack stack) {
     assert(stack->index > -1);
     int result = stack->array[stack->index--];
 
@@ -43,10 +45,10 @@ int popIntArrayStack(IntArrayStack stack) {
 }
 
 /**
- * 判断栈是否为空
+ * 判断stack是否为空
  * @param stack
  */
-bool isEmptyIntArrayStack(IntArrayStack stack) {
+bool isEmptyArrayStack(ArrayStack stack) {
     return stack->index == -1 ? true : false;
 }
 
@@ -54,7 +56,7 @@ bool isEmptyIntArrayStack(IntArrayStack stack) {
  * 打印该stack的信息
  * @param stack
  */
-void printIntArrayStack(IntArrayStack stack) {
+void printArrayStack(ArrayStack stack) {
     assert(stack != NULL);
     printf("该stack的信息为:\n");
     if(stack->index == -1) {
@@ -71,7 +73,7 @@ void printIntArrayStack(IntArrayStack stack) {
  * 释放stack所占的内存
  * @param stack
  */
-void freeIntArrayStack(IntArrayStack stack) {
+void freeArrayStack(ArrayStack stack) {
     assert(stack != NULL);
     free(stack);
 }

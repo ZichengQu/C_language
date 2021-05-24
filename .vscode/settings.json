@@ -33,7 +33,10 @@
         "5.2 orderlist.h": "c",
         "stdlib.h": "c",
         "6.1 intarraystack.h": "c",
-        "8.1 intarraystack.h": "c"
+        "8.1 intarraystack.h": "c",
+        "9.1 intarrayqueue.h": "c",
+        "9.1 arrayqueue.h": "c",
+        "8.1 arraystack.h": "c"
     }
 }
 

@@ -39,10 +39,16 @@ add_executable(7.file
     "C_programming/7. file.c"
 )
 
-add_executable(8.1-intArrayStack_main
-    "C_programming/8. Stack/8.1 intArrayStack_main.c"
-    "C_programming/8. Stack/8.1 intArrayStack.h"
-    "C_programming/8. Stack/8.1 intArrayStack.c"
+add_executable(8.1-arrayStack_main
+    "C_programming/8. Stack/8.1 arrayStack_main.c"
+    "C_programming/8. Stack/8.1 arrayStack.h"
+    "C_programming/8. Stack/8.1 arrayStack.c"
+)
+
+add_executable(9.1-arrayQueue_main
+    "C_programming/9. Queue/9.1 arrayQueue_main.c"
+    "C_programming/9. Queue/9.1 arrayQueue.h"
+    "C_programming/9. Queue/9.1 arrayQueue.c"
 )
 
 
