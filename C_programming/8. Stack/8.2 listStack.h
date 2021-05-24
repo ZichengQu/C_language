@@ -9,7 +9,7 @@
 // 8.2 listStack描述的是利用List实现stack的方式
 // stack的特点是first in，last out
 
-typedef struct node* ListStack;  // 通过这个定义后，struct node* 与 ListStack在使用上等价.
+typedef struct listStack* ListStack;  // 通过这个定义后，struct node* 与 ListStack在使用上等价.
 
 /**
  * 创建stack

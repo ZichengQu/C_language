@@ -54,12 +54,6 @@ add_executable(9.queue_main
     "C_programming/9. Queue/9.2 listQueue.h"
     "C_programming/9. Queue/9.2 listQueue.c"
 )
-# add_executable(9.2-listQueue_main
-#     "C_programming/9. Queue/9.0 queue_main.c"
-#     "C_programming/9. Queue/9.2 listQueue.h"
-#     "C_programming/9. Queue/9.2 listQueue.c"
-# )
-
 
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

@@ -10,7 +10,7 @@
 // queue的特点是first in，first out
 
 typedef struct node* Node;
-typedef struct listQueue* ListQueue;  // 已在h文件中定义
+// typedef struct listQueue* ListQueue;  // 已在h文件中定义
 
 struct node {   // 定义一个结构体, 因此node是一个自定义的数据类型.
     int value;  // 4 bytes
