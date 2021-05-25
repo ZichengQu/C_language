@@ -32,6 +32,7 @@ int main(int argc, char** argv) {
     printf("join之后的tree的叶子数为: %d\n", countLeaves(tree));
     printf("join之后的tree的高度为: %d\n", heightTree(tree));
 
+    printf("\njoin之后的tree的遍历: ");
     printf("\nPre Order Traversal: ");
     printTreePreOrder(tree);
     printf("\n");
@@ -45,6 +46,19 @@ int main(int argc, char** argv) {
     printf("\n");
 
     tree = deleteTree(tree, 10);
+
+    printf("\n删除该tree中的结点10之后的遍历: ");
+    printf("\nPre Order Traversal: ");
+    printTreePreOrder(tree);
+    printf("\n");
+
+    printf("In Order Traversal: ");
+    printTreeInOrder(tree);
+    printf("\n");
+
+    printf("Post Order Traversal: ");
+    printTreePostOrder(tree);
+    printf("\n");
 
     freeTree(tree);
 
