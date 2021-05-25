@@ -55,6 +55,12 @@ add_executable(9.queue_main
     "C_programming/9. Queue/9.2 listQueue.c"
 )
 
+add_executable(10.tree_main
+    "C_programming/10. Tree/10.1 tree_main.c"
+    "C_programming/10. Tree/10.1 tree.h"
+    "C_programming/10. Tree/10.1 tree.c"
+)
+
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
