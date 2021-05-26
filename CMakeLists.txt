@@ -61,6 +61,12 @@ add_executable(10.tree_main
     "C_programming/10. Tree/10.1 tree.c"
 )
 
+add_executable(11.graph_main
+    "C_programming/11. Graph/11.1 graph_main.c"
+    "C_programming/11. Graph/11.1 graph.h"
+    "C_programming/11. Graph/11.1 graph.c"
+)
+
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
