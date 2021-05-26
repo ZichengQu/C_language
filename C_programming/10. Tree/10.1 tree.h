@@ -54,6 +54,21 @@ int countNodes(Tree tree);
 int countLeaves(Tree tree);
 
 /**
+ * 判断两树是否相等(树中的所有的值是否相同)
+ */
+bool isSameTree(Tree t1, Tree t2);
+
+/**
+ * 从小到大，获取该Tree的第k个值 (中旬遍历是有序的)
+ */
+int getTreeKth(Tree tree, int k);
+
+/**
+ * 获取该Tree中所有奇数的和
+ */
+int sumOddTree(Tree tree);
+
+/**
  * 前序打印该tree
  */
 void printTreePreOrder(Tree tree);
@@ -72,3 +87,10 @@ void printTreePostOrder(Tree tree);
  * 释放掉内存
  */
 void freeTree(Tree tree);
+
+/**
+ * Splay tree insertion
+ * 二叉查找树的一种改进数据结构–伸展树(Splay Tree)。它的主要特点是不会保证树一直是平衡的,但各种操作的平摊时间复杂度是O(log n)
+ * 可视化流程详见 "img/tree/Splay Tree 1.png" 和 "img/tree/Splay Tree 2.png" 和 "img/tree/Splay Tree 3.png"
+ */
+Tree insertSplayTree(Tree tree, int data);
