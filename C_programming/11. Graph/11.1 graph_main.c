@@ -22,6 +22,11 @@ int main() {
 
     printGraph(graph); // 打印该graph
 
+    edge->src = 0;
+    edge->dest = 3;
+    deleteEdge(graph, edge); //从graph中删除
+    edge->src = 2;
+    edge->dest = 3;
     deleteEdge(graph, edge); //从graph中删除
     printGraph(graph); // 打印该graph
 

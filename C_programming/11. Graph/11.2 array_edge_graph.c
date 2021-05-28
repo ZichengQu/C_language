@@ -15,11 +15,10 @@ struct graph {
 
 // typedef struct edge* Edge;
 
-// struct edge
-// {
-//     Vertex src; // 该edge的起始点
-//     Vertex dest; // 该edge的终点
-//     int weight; // 该edge的权重
+// struct edge {
+//     Vertex src;   // 该edge的起始点
+//     Vertex dest;  // 该edge的终点
+//     int weight;   // 该edge的权重
 // };
 
 /**
