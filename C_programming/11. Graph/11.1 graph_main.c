@@ -25,7 +25,7 @@ int main() {
     deleteEdge(graph, edge); //从graph中删除
     printGraph(graph); // 打印该graph
 
-    freeGraph(graph); // 释放内存（没用malloc，释放什么内存？）
+    freeGraph(graph); // 释放内存
 
     return 0;
 }
