@@ -1,8 +1,7 @@
+#include <assert.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
-#include <assert.h>
-
 
 /**
  * 创建结构体指针
@@ -13,13 +12,11 @@ typedef int Vertex;
 
 typedef struct edge* Edge;
 
-struct edge
-{
-    Vertex src; // 该edge的起始点
-    Vertex dest; // 该edge的终点
-    int weight; // 该edge的权重
+struct edge {
+    Vertex src;   // 该edge的起始点
+    Vertex dest;  // 该edge的终点
+    int weight;   // 该edge的权重
 };
-
 
 /**
  * 根据顶点个数，创建一个Graph
@@ -52,9 +49,3 @@ void printGraph(Graph graph);
  * 释放掉该Graph申请的内存
  */
 void freeGraph(Graph graph);
-
-
-
-
-
-
