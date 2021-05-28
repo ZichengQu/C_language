@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <assert.h>
+
 
 /**
  * 创建结构体指针
@@ -33,9 +38,10 @@ void insertEdge(Graph graph, Edge edge);
 void deleteEdge(Graph graph, Edge edge);
 
 /**
- * 判断是否存在一条边
+ * 判断是否存在一条边.
+ * 若存在，则返回其index; 若不存在，则返回-1
  */
-void adjacent(Graph graph, Edge edge);
+int adjacent(Graph graph, Edge edge);
 
 /**
  * 打印该Graph

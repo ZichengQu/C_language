@@ -5,9 +5,7 @@
 int main() {
     int numberOfVertices = 5;  // 假设有5个顶点
     Graph graph = newGraph(numberOfVertices);
-
-    Edge edge;  // 会在stack区分配该内存，与 int number 类似
-    // Edge edge = malloc(sizeof(struct edge)); // 会在heap区分配内存
+    Edge edge = malloc(sizeof(struct edge)); // 会在heap区分配内存
 
     edge->src = 0;
     edge->dest = 1;

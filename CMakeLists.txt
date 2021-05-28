@@ -61,10 +61,20 @@ add_executable(10.tree_main
     "C_programming/10. Tree/10.1 tree.c"
 )
 
-add_executable(11.graph_main
+add_executable(11.2-array_graph
     "C_programming/11. Graph/11.1 graph_main.c"
     "C_programming/11. Graph/11.1 graph.h"
-    "C_programming/11. Graph/11.1 graph.c"
+    "C_programming/11. Graph/11.2 array_edge_graph.c"
+)
+add_executable(11.3-matrix_graph
+    "C_programming/11. Graph/11.1 graph_main.c"
+    "C_programming/11. Graph/11.1 graph.h"
+    "C_programming/11. Graph/11.3 matrix_graph.c"
+)
+add_executable(11.4-adjacency_list_graph
+    "C_programming/11. Graph/11.1 graph_main.c"
+    "C_programming/11. Graph/11.1 graph.h"
+    "C_programming/11. Graph/11.4 adjacency_list_graph.c"
 )
 
 
