@@ -22,7 +22,7 @@ int main() {
 
     printGraph(graph); // 打印该graph
 
-    deleteEdge(graph, edge);
+    deleteEdge(graph, edge); //从graph中删除
     printGraph(graph); // 打印该graph
 
     freeGraph(graph); // 释放内存（没用malloc，释放什么内存？）
