@@ -73,8 +73,7 @@ int main(void) {
     while(n1_index < n1 && n2_index < n2) {  // 当两个数组均不为空时
         if(array1[n1_index] <= array2[n2_index]) {
             array3[n3_index++] = array1[n1_index++];
-        }
-        else if(array2[n2_index] < array1[n1_index]) {
+        } else if(array2[n2_index] < array1[n1_index]) {
             array3[n3_index++] = array2[n2_index++];
         }
     }
@@ -97,11 +96,9 @@ int main(void) {
         if(array1[n1_index] == array2[n2_index]) {
             array4[n4_index++] = array1[n1_index++];
             n2_index++;
-        }
-        else if(array1[n1_index] < array2[n2_index]) {
+        } else if(array1[n1_index] < array2[n2_index]) {
             n1_index++;
-        }
-        else if(array2[n2_index] < array1[n1_index]) {
+        } else if(array2[n2_index] < array1[n1_index]) {
             n2_index++;
         }
     }

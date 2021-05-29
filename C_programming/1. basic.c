@@ -58,11 +58,9 @@ int main() {
     bool flag2 = false;
     if(flag1 == true && flag2 == false) {  //或者直接判断是否等于0和1, 来代替true和false
         printf("Output 11: bool=> flag1: %d, flag2: %d\n", flag1, flag2);
-    }
-    else if(false) {
+    } else if(false) {
         printf("Output 12: Here is else if.\n");
-    }
-    else {
+    } else {
         printf("Output 13: Here is else\n");
     }
 

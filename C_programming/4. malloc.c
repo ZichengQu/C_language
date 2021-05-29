@@ -28,7 +28,7 @@ int main(int argc, char* argv[]) {
 
     // free(numbers); // 手动申请的内存, 要手动去释放.
 
-    char* first_word  = malloc(sizeof(char) * strlen(argv[1] + 1));  // 第一个参数的下标为1, 不是0. 加1是因为要把字符串中 \0 的位置加上.
+    char* first_word = malloc(sizeof(char) * strlen(argv[1] + 1));   // 第一个参数的下标为1, 不是0. 加1是因为要把字符串中 \0 的位置加上.
     char* second_word = malloc(sizeof(char) * strlen(argv[2] + 1));  // 要小心malloc的内存申请和释放问题.
     // first_word = argv[1]; // 如果这样, 其malloc的内存就没用了.
     // second_word = argv[2]; // 因为char* 指针指向了argv的stack区.
@@ -44,8 +44,7 @@ int main(int argc, char* argv[]) {
     // strcmp返回0则表示这两个字符串相等.
     if(strcmp(first_word, second_word) == 0) {  // 若first_word == second_word, 则表示的是判断地址是否相等.
         printf("Output 4: first_word (%s)与second_word (%s)相等.'\n", first_word, second_word);
-    }
-    else {
+    } else {
         printf("Output 4: first_word (%s) 与 second_word (%s) 不相等.'\n", first_word, second_word);
     }
 

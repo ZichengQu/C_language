@@ -57,11 +57,9 @@ int compareTo(Node first, Node second) {  // 对比两个Node的value1的大小
     int result = 0;
     if(first->value < second->value) {
         result = -1;
-    }
-    else if(first->value > second->value) {
+    } else if(first->value > second->value) {
         result = 1;
-    }
-    else {
+    } else {
         result = strcmp(first->string, second->string);  // first.string > second.string? 1: (first.string < second.string? -1: 0)
     }
     return result;
@@ -77,17 +75,14 @@ void appendByOrder(LinkedList list, double value, char* string) {  // 有序递�
     if(list->first_node == NULL) {           // 如果第一个node是空的.
         list->first_node = new_node;         // 则创建第一个node.
         list->last_node = list->first_node;  // 因为此时该list只有一个node, 所有其最后一个node和第一个node是同一个node.
-    }
-    else {
+    } else {
         if(compareTo(new_node, list->first_node) < 0) {  // new_node的value1比first_node的value1还小.
             new_node->next = list->first_node;
             list->first_node = new_node;
-        }
-        else if(compareTo(new_node, list->last_node) > 0) {  // new_node的value1比last_node的value1还大.
-            list->last_node->next = new_node;                // 将新节点与list->last_node建立连接.
-            list->last_node = new_node;                      // 更新list->last_node为new_node.
-        }
-        else {
+        } else if(compareTo(new_node, list->last_node) > 0) {  // new_node的value1比last_node的value1还大.
+            list->last_node->next = new_node;                  // 将新节点与list->last_node建立连接.
+            list->last_node = new_node;                        // 更新list->last_node为new_node.
+        } else {
             Node pre = list->first_node;
             Node current = list->first_node->next;
             while(current != NULL) {                                                      // 当current不为空时

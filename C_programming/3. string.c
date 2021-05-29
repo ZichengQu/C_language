@@ -36,7 +36,7 @@ int main(void) {
     pointer = word_1;  // 为该指针赋值(值是地址).
 
     // 无论更改哪个, 都会更改原字符串的值.
-    *(word_1 + 2)  = 'L';  // 利用地址修改值. 等同于word_1[2]
+    *(word_1 + 2) = 'L';   // 利用地址修改值. 等同于word_1[2]
     *(pointer + 3) = 'L';  // C语言字符串中一个char是1 byte, 加1则将地址映射到下一个char.
     // 指针：指针指向的是地址, 而 * 反应的是地址上存放的是内容.
     printf("Output 3: 字符串'%s' 的第二个地址上的内容：%c\n", pointer, *(pointer + 1));
@@ -45,7 +45,7 @@ int main(void) {
     printf("Output 4: 数字 number01 的值为'%d' , 其内存地址为：%p\n", number01, &number01);
 
     int* number02 = &number01;  // 声明并为该int*赋值. 因为指针存储的是地址, 所以通过 & 取number01的地址并为该int*赋值(值是地址).
-    *number02     = 2;
+    *number02 = 2;
     printf("Output 5: 数字 number01 的值为'%d' , 其内存地址为：%p\n", number01, &number01);  // 因为操控的是地址, 所以会同时改变number01.
     printf("Output 6: 数字 number02 的值为'%d' , 其内存地址为：%p\n", *number02, number02);
 

@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "/home/zicheng/Workspace/C_language/C_programming/5. LinkedList/5.2 orderList.h"  // 标准类库用<>, 自定义的h文件用双引号.
+#include "5. LinkedList/5.2 orderList.h"  // 标准类库用<>, 自定义的h文件用双引号.
+
 #define MAXSTRING 1024  // 这里暂时默认一行最大输入为1024
 
 int readFile(char* fileName) {

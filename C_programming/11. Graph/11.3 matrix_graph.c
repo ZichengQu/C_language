@@ -90,7 +90,7 @@ int adjacent(Graph graph, Edge edge) {
 /**
  * 返回该Graph中的顶点V的个数.
  */
-int numberOfVerticesInGraph(Graph graph){
+int numberOfVerticesInGraph(Graph graph) {
     return graph->nV;
 }
 

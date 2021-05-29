@@ -50,10 +50,10 @@ void enqueueList(ListQueue queue, int data) {
     node->value = data;
     node->next = NULL;
 
-    if(queue->front == NULL){
+    if(queue->front == NULL) {
         queue->front = node;
         queue->rear = node;
-    } else{
+    } else {
         queue->rear->next = node;
         queue->rear = node;
     }
@@ -71,9 +71,9 @@ int popListQueue(ListQueue queue) {
         return -INFINITY;
     }
     firstNode = queue->front;
-    if(queue->front == queue->rear){
+    if(queue->front == queue->rear) {
         queue->front = queue->rear = NULL;
-    }else{
+    } else {
         queue->front = queue->front->next;
     }
     pop_value = firstNode->value;

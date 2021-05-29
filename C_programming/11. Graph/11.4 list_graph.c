@@ -53,7 +53,7 @@ void deleteEdge(Graph graph, Edge edge) {
 
     delete(graph->edges[edge->src], edge->dest);
 
-    if(isEmptyList(graph->edges[edge->src])){ // 如果某个顶点V的edges为空，则删除掉该edges数组.
+    if(isEmptyList(graph->edges[edge->src])) {  // 如果某个顶点V的edges为空，则删除掉该edges数组.
         free(graph->edges[edge->src]);
         graph->edges[edge->src] = NULL;
     }

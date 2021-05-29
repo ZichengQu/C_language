@@ -28,20 +28,6 @@
                 "MIMode": "gdb"
             }
         }
-    },
-    "files.associations": {
-        "5.2 orderlist.h": "c",
-        "stdlib.h": "c",
-        "6.1 intarraystack.h": "c",
-        "8.1 intarraystack.h": "c",
-        "9.1 intarrayqueue.h": "c",
-        "9.1 arrayqueue.h": "c",
-        "8.1 arraystack.h": "c",
-        "math.h": "c",
-        "9.2 listqueue.h": "c",
-        "list.h": "c",
-        "stdio.h": "c",
-        "11.5 dfs.h": "c"
     }
 }
 

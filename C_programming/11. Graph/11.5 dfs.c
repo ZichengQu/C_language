@@ -40,16 +40,16 @@ void findPath(Graph graph, Vertex src, Vertex dest, int* visited) {
     }
     visited[src] = src;
     if(dfsPathCheck(graph, src, dest, visited) == true) {
-        printf("DFS路径为(从后向前输出): "); // 6 <-- 5 <-- 1 <-- 0
-        Vertex v = dest;  // 从后向前遍历. 
-        while(v != src) { // 
+        printf("DFS路径为(从后向前输出): ");  // 6 <-- 5 <-- 1 <-- 0
+        Vertex v = dest;                      // 从后向前遍历.
+        while(v != src) {                     //
             printf("%d <-- ", v);
             v = visited[v];  // 获取路径中，顶点V的前一个顶点
         }
         printf("%d\n", src);
 
-        printf("DFS路径为(从前向后输出): "); // 0 --> 1 --> 5 --> 6
-        printPath(dest, src, visited); 
+        printf("DFS路径为(从前向后输出): ");  // 0 --> 1 --> 5 --> 6
+        printPath(dest, src, visited);
         printf("\n");
     }
 }

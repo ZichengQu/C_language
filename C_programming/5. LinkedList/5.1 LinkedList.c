@@ -40,9 +40,8 @@ void append(LinkedList list, int value, int inverse, int duplicate_removal) {  /
     if(list->first_node == NULL) {           // 如果第一个node是空的.
         list->first_node = new_node;         // 则创建第一个node.
         list->last_node = list->first_node;  // 因为此时该list只有一个node, 所有其最后一个node和第一个node是同一个node.
-    }
-    else {                       // 首元素不为空.
-        if(duplicate_removal) {  // 去重, 相当于一个set, 但与set原理不同.
+    } else {                                 // 首元素不为空.
+        if(duplicate_removal) {              // 去重, 相当于一个set, 但与set原理不同.
             Node current = list->first_node;
             while(current != NULL) {
                 if(current->value == value) {
@@ -55,8 +54,7 @@ void append(LinkedList list, int value, int inverse, int duplicate_removal) {  /
         if(inverse) {  // 从最前面添加新节点.
             new_node->next = list->first_node;
             list->first_node = new_node;
-        }
-        else {                                 // 从最后面添加新节点.
+        } else {                               // 从最后面添加新节点.
             list->last_node->next = new_node;  // 将新节点与list->last_node建立连接.
             list->last_node = new_node;        // 更新list->last_node为new_node.
         }
@@ -87,8 +85,7 @@ void delete(LinkedList list, int value) {  // 根据value, 删除list中值为va
         list->first_node = deleteNode->next;  // 不需要判断list->first_node与list->last_node是否相等. 若相等, last也会被free掉. 若不相等, 就只有first会被free掉.
         free(deleteNode);
         list->len--;
-    }
-    else {
+    } else {
         Node pre = list->first_node;
         Node current = list->first_node->next;
         while(current != NULL) {
@@ -113,8 +110,7 @@ int compareTo(Node first, Node second) {  // 对比两个Node的value的大小
     int result = 0;
     if(first->value < second->value) {
         result = -1;
-    }
-    else if(first->value > second->value) {
+    } else if(first->value > second->value) {
         result = 1;
     }
     return result;
@@ -125,17 +121,14 @@ void appendByOrder(LinkedList list, int value) {  // 有序递增插入
     if(list->first_node == NULL) {           // 如果第一个node是空的.
         list->first_node = new_node;         // 则创建第一个node.
         list->last_node = list->first_node;  // 因为此时该list只有一个node, 所有其最后一个node和第一个node是同一个node.
-    }
-    else {
+    } else {
         if(compareTo(new_node, list->first_node) < 0) {  // new_node的value比first_node的value还小.
             new_node->next = list->first_node;
             list->first_node = new_node;
-        }
-        else if(compareTo(new_node, list->last_node) > 0) {  // new_node的value比last_node的value还大.
-            list->last_node->next = new_node;                // 将新节点与list->last_node建立连接.
-            list->last_node = new_node;                      // 更新list->last_node为new_node.
-        }
-        else {
+        } else if(compareTo(new_node, list->last_node) > 0) {  // new_node的value比last_node的value还大.
+            list->last_node->next = new_node;                  // 将新节点与list->last_node建立连接.
+            list->last_node = new_node;                        // 更新list->last_node为new_node.
+        } else {
             Node pre = list->first_node;
             Node current = list->first_node->next;
             while(current != NULL) {                                                      // 当current不为空时

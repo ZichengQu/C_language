@@ -1,8 +1,8 @@
-#include <stdbool.h> // 已在h文件中定义
+#include <assert.h>
+#include <math.h>
+#include <stdbool.h>  // 已在h文件中定义
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
-#include <assert.h>
 
 // 9.2 listQueue描述的是利用List实现queue的方式
 // queue的特点是first in，first out
