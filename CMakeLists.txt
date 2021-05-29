@@ -78,6 +78,13 @@ add_executable(11.4-adjacency_list_graph
     "C_programming/11. Graph/utils/list.h"
     "C_programming/11. Graph/utils/list.c"
 )
+add_executable(11.5-dfs
+    "C_programming/11. Graph/11.5 dfs_main.c"
+    "C_programming/11. Graph/11.1 graph.h"
+    "C_programming/11. Graph/11.3 matrix_graph.c"
+    "C_programming/11. Graph/11.5 dfs.h"
+    "C_programming/11. Graph/11.5 dfs.c"
+)
 
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

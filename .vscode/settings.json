@@ -40,7 +40,8 @@
         "math.h": "c",
         "9.2 listqueue.h": "c",
         "list.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "11.5 dfs.h": "c"
     }
 }
 
