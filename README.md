@@ -27,19 +27,19 @@
 # 工具 && 环境
 
 1. **使用环境及软件**</br>
-   [Windows 10 (x64 systems: Version 1903 or higher, with Build 18362 or higher)](https://www.microsoft.com/en-hk/software-download/windows10)
+   **[Windows 10 (x64 systems: Version 1903 or higher, with Build 18362 or higher)](https://www.microsoft.com/en-hk/software-download/windows10)**
 
-   [WSL2 (English Version)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or [WSL2 (中文简体)](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)
+   **[WSL2 (English Version)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or [WSL2 (中文简体)](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)**
 
-   [Ubuntu 20.04](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice)
+   **[Ubuntu 20.04](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice)**
 
-   [Visual Studio Code (VSCode)](https://code.visualstudio.com/)
+   **[Visual Studio Code (VSCode)](https://code.visualstudio.com/)**
 2. **使用的VSCode插件 (在VSCode->Extensions进行install)**</br>
-   [Remote-WSL](https://code.visualstudio.com/docs/remote/wsl)
+   **[Remote-WSL](https://code.visualstudio.com/docs/remote/wsl)**
 
-   [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+   **[C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)**
 
-   [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)
+   **[CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)**
 
 3. **安装C环境**
 
