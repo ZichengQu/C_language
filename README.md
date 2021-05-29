@@ -51,7 +51,7 @@
    sudo apt-get install cmake gcc clang gdb build-essential
    ```
 
-4. **配置Debug环境**</br>
+4. **配置Debug环境 (均已在对应位置添加了详细注释)**</br>
    4.1 配置方案 (1)</br>
 
    ```
