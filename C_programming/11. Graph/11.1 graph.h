@@ -41,6 +41,11 @@ void deleteEdge(Graph graph, Edge edge);
 int adjacent(Graph graph, Edge edge);
 
 /**
+ * 返回该Graph中的顶点V的个数.
+ */
+int numberOfVertices(Graph graph);
+
+/**
  * 打印该Graph
  */
 void printGraph(Graph graph);

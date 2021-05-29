@@ -88,6 +88,13 @@ int adjacent(Graph graph, Edge edge) {
 }
 
 /**
+ * 返回该Graph中的顶点V的个数.
+ */
+int numberOfVertices(Graph graph){
+    return graph->nV;
+}
+
+/**
  * 打印该Graph
  */
 void printGraph(Graph graph) {
