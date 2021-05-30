@@ -40,8 +40,9 @@
    **[C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)**
 
    **[CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)**
+3. **[VSCode中代码Format配置文件](.clang-format)**</br>
 
-3. **安装C环境**
+4. **安装C环境**
 
    ```
    sudo apt update
@@ -51,8 +52,8 @@
    sudo apt-get install cmake gcc clang gdb build-essential
    ```
 
-4. **配置Debug环境 (均已在对应位置添加了详细注释)**</br>
-   4.1 配置方案 (1)</br>
+5. **配置Debug环境 (均已在对应位置添加了详细注释)**</br>
+   5.1 配置方案 (1)</br>
 
    ```
    .vscode/c_cpp_properties.json
@@ -66,5 +67,5 @@
    .vscode/launch.json
    ```
 
-   4.2 配置方案 (2)</br>
+   5.2 配置方案 (2)</br>
    若想使用``CMake`` (该Repository的所有代码均已配置了CMakeLists.txt, 可直接通过CMake的方式运行)，则需 ``Ctrl + Shift + P`` 搜索``cmake -> quick start -> execute``，在生成的``CMakeLists.txt``中配置``add_executable``; 并在``.vscode``中添加``setting.json``, 在其中添加 ``cmake.debugConfig`` 进行传``argv``等参数.
