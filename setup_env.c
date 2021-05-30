@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+/**
+ * 测试是否能运行，该程序非本代码教程内容
+ */
 int main(int argc, char** argv) {
     // 通过launch.json或settings.json(cmake)的args向main函数中传参.
     printf("argc为: %d\n", argc);
