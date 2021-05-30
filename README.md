@@ -67,4 +67,4 @@
    ```
 
    4.2 配置方案 (2)</br>
-   若想使用``CMake``，则需 ``Ctrl + Shift + P`` 搜索``cmake -> quick start -> execute``，在生成的``CMakeLists.txt``中配置``add_executable``; 并在``.vscode``中添加``setting.json``, 在其中添加 ``cmake.debugConfig`` 进行传``argv``等参数.
+   若想使用``CMake`` (该Repository的所有代码均已配置了CMakeLists.txt, 可直接通过CMake的方式运行)，则需 ``Ctrl + Shift + P`` 搜索``cmake -> quick start -> execute``，在生成的``CMakeLists.txt``中配置``add_executable``; 并在``.vscode``中添加``setting.json``, 在其中添加 ``cmake.debugConfig`` 进行传``argv``等参数.
