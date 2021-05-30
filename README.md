@@ -31,7 +31,7 @@
 
    **[WSL2 (English Version)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or [WSL2 (中文简体)](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)**
 
-   **[Ubuntu 20.04](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice)**
+   **[Ubuntu 20.04 in Microsoft Store](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice)**
 
    **[Visual Studio Code (VSCode)](https://code.visualstudio.com/)**
 2. **使用的VSCode插件 (在VSCode->Extensions进行install)**</br>
