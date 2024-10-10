@@ -22,6 +22,7 @@
     11.3 **Graph implementation via matrix**</br>
     11.4 **Graph implementation via list**</br>
     11.5 **DFS code && BFS pseudocode**</br>
+12. **[C语言指针详解](https://cloud.tencent.com/developer/article/1787253)**</br>
     </br>
 
 # 工具 && 环境
