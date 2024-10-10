@@ -22,7 +22,10 @@
     11.3 **Graph implementation via matrix**</br>
     11.4 **Graph implementation via list**</br>
     11.5 **DFS code && BFS pseudocode**</br>
-12. **[C语言指针详解](https://cloud.tencent.com/developer/article/1787253)**</br>
+12. **[C语言基础教程](https://www.runoob.com/cprogramming/c-pointers.html)**</br>
+13. **[C语言指针详解](https://cloud.tencent.com/developer/article/1787253)**</br>
+    13.1 **重点关注：const属性**</br>
+    13.2 **重点关注：void型指针、指针数组与数组指针、二维数组和指针、结构体指针、函数指针**</br>
     </br>
 
 # 工具 && 环境
